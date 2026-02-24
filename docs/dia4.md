@@ -172,6 +172,8 @@ Empiezas a pensar como programador.
 
 No copies ejemplos anteriores. Escríbelo desde cero.
 
+Resuelve este ejercicio en [Codepen](https://codepen.io/) y comparte la URL cuando envíes la tarea.
+
 ---
 
 ### Enviar solución
@@ -193,7 +195,7 @@ La práctica es lo que consolida el aprendizaje.
 Responde sin mirar arriba:
 
 1. ¿Qué diferencia hay entre parámetro y argumento?
-2. ¿Qué ocurre si no usas return?
+2. ¿Qué ocurre si no usas `return`?
 3. ¿Cuándo conviene crear una función?
 
 Si puedes explicarlo con tus palabras → lo entendiste.

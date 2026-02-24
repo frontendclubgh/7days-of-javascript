@@ -180,6 +180,8 @@ Ahora te toca aplicar.
 
 No copies. Escríbelo desde cero.
 
+Resuelve este ejercicio en [Codepen](https://codepen.io/) y comparte la URL cuando envíes la tarea.
+
 ---
 
 ### Enviar solución

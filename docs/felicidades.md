@@ -1,4 +1,4 @@
-# 🎉 Has completado el reto 7DaysOfJavaScript
+# 🎉 Has completado el reto 7DaysOfJS
 
 ---
 

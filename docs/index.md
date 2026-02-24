@@ -21,7 +21,7 @@ Este reto está diseñado para que avances paso a paso, sin saturarte de informa
 
 Cada día encontrarás:
 
-### 📘 1. Tema de estudio
+### 1. Tema de estudio
 
 Un concepto clave de JavaScript explicado de forma clara y directa.
 
@@ -30,7 +30,7 @@ Solo el 20% que realmente usarás el 80% del tiempo.
 
 ---
 
-### 💻 2. Ejemplos prácticos
+### 2. Ejemplos
 
 Verás ejemplos simples para entender cómo funciona el concepto en código real.
 
@@ -38,7 +38,7 @@ La idea no es copiar, sino comprender cómo se construye la lógica.
 
 ---
 
-### ✏️ 3. Ejercicio obligatorio
+### 3. Ejercicios
 
 Cada día tendrás un ejercicio para resolver por tu cuenta.
 
@@ -48,9 +48,11 @@ Después de resolverlo, debes enviarlo a través del [formulario de tareas](http
 
 No enviar = no completar el día.
 
+[Únete al grupo](https://chat.whatsapp.com/DjtuOCCEkKy00FIFNEFzAr) para aprender con otros que se están iniciando.
+
 ---
 
-### 🧠 4. Cuestionario personal
+### 4. Cuestionarios
 
 También tendrás algunas preguntas de reflexión.
 

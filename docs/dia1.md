@@ -162,6 +162,8 @@ Ahora te toca aplicar.
 
 No copies ejemplos anteriores. Escríbelo desde cero.
 
+Resuelve este ejercicio en [Codepen](https://codepen.io/) y comparte la URL cuando envíes la tarea.
+
 ---
 
 ### Enviar solución

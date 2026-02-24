@@ -142,6 +142,8 @@ Ahora te toca aplicar.
 
 No copies el ejemplo. Escríbelo desde cero.
 
+Resuelve este ejercicio en [Codepen](https://codepen.io/) y comparte la URL cuando envíes la tarea.
+
 ---
 
 ### Enviar solución
@@ -162,9 +164,9 @@ Aquí entrenamos en serio.
 
 Responde sin mirar arriba:
 
-1. ¿Cuándo es mejor usar for?
-2. ¿Cuál es el riesgo principal de un while?
-3. ¿Qué hace exactamente i++?
+1. ¿Cuándo es mejor usar `for`?
+2. ¿Cuál es el riesgo principal de un `while`?
+3. ¿Qué hace exactamente `i++`?
 
 Si puedes responder sin copiar → entendiste.
 

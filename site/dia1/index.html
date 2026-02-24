@@ -1,0 +1,911 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Reto práctico para dominar el 20% más importante de JavaScript">
+      
+      
+        <meta name="author" content="Frontend Club">
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../dia2/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>📔 Dia 1 - 7 Days of JavaScript</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="orange" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#dia-1-variables-y-operadores" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="7 Days of JavaScript" class="md-header__button md-logo" aria-label="7 Days of JavaScript" data-md-component="logo">
+      
+  <img src="../assets/images/javascript.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            7 Days of JavaScript
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              📔 Dia 1
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="7 Days of JavaScript" class="md-nav__button md-logo" aria-label="7 Days of JavaScript" data-md-component="logo">
+      
+  <img src="../assets/images/javascript.png" alt="logo">
+
+    </a>
+    7 Days of JavaScript
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    👋 Bienvenido
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    📔 Dia 1
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    📔 Dia 1
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objetivo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metodologia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metodología
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Metodología">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tipos de datos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operadores-y-comparaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operadores y comparaciones
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operador-ternario" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operador ternario
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practicar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practicar
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Practicar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enviar-solucion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enviar solución
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cuestionario" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cuestionario
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusión
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dia2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    📔 Dia 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dia3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    📔 Dia 3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dia4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    📔 Dia 4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dia5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    📔 Dia 5
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dia6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    📔 Dia 6
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dia7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    📔 Dia 7
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../felicidades/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    🎉 Felicidades
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objetivo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metodologia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metodología
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Metodología">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tipos de datos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operadores-y-comparaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operadores y comparaciones
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operador-ternario" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operador ternario
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practicar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practicar
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Practicar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enviar-solucion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enviar solución
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cuestionario" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cuestionario
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusión
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="dia-1-variables-y-operadores">Día 1 — Variables y Operadores</h1>
+<hr />
+<h2 id="objetivo">Objetivo</h2>
+<p>Hoy aprenderás el fundamento de toda la programación:</p>
+<ul>
+<li>Guardar información</li>
+<li>Entender qué tipo de información estás guardando</li>
+<li>Comparar valores</li>
+<li>Tomar una decisión simple</li>
+</ul>
+<p>Si dominas esto, dominas el 20% de JavaScript que usarás el 80% del tiempo.</p>
+<p>⏱ Tiempo estimado: 20–25 minutos.</p>
+<hr />
+<h2 id="metodologia">Metodología</h2>
+<p>Hoy no vas a memorizar.</p>
+<p>Vas a:</p>
+<ol>
+<li>Entender qué problema resuelve cada herramienta.</li>
+<li>Ver ejemplos simples.</li>
+<li>Escribir tu propio código.</li>
+<li>Aplicarlo en un pequeño ejercicio.</li>
+</ol>
+<p>Recuerda:</p>
+<blockquote>
+<p>No nos pagan por escribir código.<br />
+Nos pagan por resolver problemas.</p>
+</blockquote>
+<hr />
+<h3 id="variables">Variables</h3>
+<p>Una variable es un contenedor de información.</p>
+<pre><code class="language-js">const nombre = &quot;Ana&quot;;
+let edad = 25;
+</code></pre>
+<p>Regla de oro:</p>
+<ul>
+<li>Usa <code>const</code> por defecto.</li>
+<li>Usa <code>let</code> solo si el valor cambiará.</li>
+</ul>
+<p>Si algo no debe cambiar, protégelo.</p>
+<p><strong>Ejemplo real:</strong><br />
+Imagina un sistema de registro:  </p>
+<pre><code class="language-js">const usuario = &quot;Carlos&quot;;
+let intentos = 1;
+
+intentos = intentos + 1;
+</code></pre>
+<p>El nombre no cambia.<br />
+Los intentos sí.</p>
+<p>Eso define qué usar.</p>
+<hr />
+<h3 id="tipos-de-datos">Tipos de datos</h3>
+<p>JavaScript puede guardar distintos tipos de información.</p>
+<pre><code class="language-js">let numero = 42;          // Number
+let texto = &quot;Hola&quot;;       // String
+let activo = true;        // Boolean
+let nulo = null;          // Null
+let indefinido;           // Undefined
+</code></pre>
+<p>No necesitas memorizar todos.  </p>
+<p>Solo entiende:</p>
+<ul>
+<li>Números → cálculos</li>
+<li>Texto → mensajes</li>
+<li>Booleanos → decisiones</li>
+</ul>
+<p>Eso cubre casi todo lo que usarás al inicio.</p>
+<hr />
+<h3 id="operadores-y-comparaciones">Operadores y comparaciones</h3>
+<p>Los operadores permiten trabajar con datos.</p>
+<pre><code class="language-js">const a = 10;
+const b = 5;
+
+console.log(a + b);     // 15
+console.log(a &gt; b);     // true
+console.log(5 === &quot;5&quot;); // false
+</code></pre>
+<p>Regla importante:  </p>
+<p>Usa siempre <code>===</code></p>
+<p>Compara valor y tipo.</p>
+<p>Evita errores silenciosos.</p>
+<hr />
+<h3 id="operador-ternario">Operador ternario</h3>
+<p>Forma corta de tomar una decisión.</p>
+<pre><code class="language-js">// OPERADOR TERNARIO
+const edad = 20;
+const resultado = edad &gt;= 18 ? &quot;Mayor de edad&quot; : &quot;Menor de edad&quot;;
+console.log(resultado);
+</code></pre>
+<p>Traducción mental:</p>
+<p>Si la condición es verdadera → opción A<br />
+Si no → opción B</p>
+<p>Eso es lógica básica.</p>
+<hr />
+<h2 id="practicar">Practicar</h2>
+<p>Leer no te convierte en programador.</p>
+<p>Escribir sí.</p>
+<p>El conocimiento no se acumula.
+Se construye practicando.</p>
+<p>Si hoy solo lees y no escribes código, mañana olvidarás el 80%.</p>
+<p>Si escribes, aunque te equivoques, estás entrenando tu lógica.</p>
+<p>Ahora te toca aplicar.</p>
+<hr />
+<h3 id="ejercicio">Ejercicio</h3>
+<pre><code class="language-js">1. Crea una variable con tu nombre (`const`)
+2. Crea una variable con tu edad (`let`)
+3. Crea un mensaje usando template literals
+4. Usa un operador ternario para verificar si eres mayor de edad
+</code></pre>
+<p>No copies ejemplos anteriores. Escríbelo desde cero.</p>
+<hr />
+<h3 id="enviar-solucion">Enviar solución</h3>
+<p>Cuando termines:</p>
+<ul>
+<li>Ejecuta tu código en consola.</li>
+<li>Verifica que funcione sin fallas.</li>
+<li><a href="https://frontendclubgh.github.io/7daysofjavascript/tarea.html">Sube la solución</a> para recibir feedback</li>
+</ul>
+<p>No enviar = no completar.</p>
+<p>Aquí entrenamos en serio.</p>
+<hr />
+<h2 id="cuestionario">Cuestionario</h2>
+<p>Responde sin mirar arriba:</p>
+<ol>
+<li>¿Cuál es la diferencia entre <code>let</code> y <code>const</code>?</li>
+<li>¿Qué retorna <code>5 === "5"</code> y por qué?</li>
+<li>Escribe un operador ternario que retorne "Par" o "Impar".</li>
+</ol>
+<p>Si puedes responder sin copiar → entendiste.</p>
+<hr />
+<h2 id="conclusion">Conclusión</h2>
+<p>Hoy aprendiste lo esencial de JavaScript:</p>
+<ul>
+<li>Variables</li>
+<li>Tipos básicos</li>
+<li>Comparaciones</li>
+<li>Decisiones simples</li>
+</ul>
+<p>Eso es el núcleo del lenguaje.</p>
+<p>La mayoría de los programas hacen esto:</p>
+<ol>
+<li>Guardan datos.</li>
+<li>Los evalúan.</li>
+<li>Toman decisiones.</li>
+</ol>
+<p>Ese es el 20% que genera el 80% de los resultados.</p>
+<p>Mañana tu código empezará a tomar decisiones más complejas.</p>
+<p>Paso a paso.</p>
+<p>Entrenamos lógica, no solo sintaxis.</p>
+<hr />
+<blockquote>
+<p>"La mejor manera de aprender JavaScript es practicando todos los días."</p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>

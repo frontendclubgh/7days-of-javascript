@@ -3,7 +3,8 @@ site_description: Reto práctico para dominar el 20% más importante de JavaScri
 site_author: Frontend Club
 theme:
   name: material
-  logo: assets/images/javascript.png
+  favicon: assets/images/logo-js.png
+  logo: assets/images/logo-js.png
   language: es
   palette:
     scheme: default
